@@ -9,11 +9,10 @@ import john.pazekha.krakow.R
 @BindingAdapter("android:expanded")
 fun setExpandedState(view: ImageView, isExpanded: Boolean) {
     view.setImageResource(R.drawable.ic_group_arrow)
-    val rotate: RotateAnimation
-    if (isExpanded) {
-        rotate = RotateAnimation(0f, 90f, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f)
+    val rotate = if (isExpanded) {
+        RotateAnimation(0f, 90f, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f)
     } else {
-        rotate = RotateAnimation(90f, 0f, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f)
+        RotateAnimation(90f, 0f, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f)
     }
     rotate.duration = 300
     rotate.fillAfter = true
