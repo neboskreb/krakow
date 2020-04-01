@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="JBM">John Y. Pazekha</string>
+    <string translatable="false" name="role">Senior Android Developer</string>
+    <string translatable="false" name="phone">+31612374997</string>
+    <string translatable="false" name="email">neboskreb@narod.ru</string>
+    <string translatable="false" name="linkedin">http://www.linkedin.com/in/yevgeniypazekha</string>
+</resources>

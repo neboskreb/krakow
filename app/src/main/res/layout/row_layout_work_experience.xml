@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="john.pazekha.krakow.ui.recycler.EntryJob" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/entry_background"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:paddingStart="@dimen/entry_offset"
+        android:paddingEnd="0dp"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:url="@{model.logoUrl}"
+            tools:src="@drawable/ic_whatsapp"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/text_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{model.period}"
+            tools:text="2019-2020"
+            />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/text_field"
+            app:layout_constraintTop_toBottomOf="@+id/text_field"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{model.title}"
+            tools:text="@string/role"
+            />
+
+        <TextView
+            android:id="@+id/label_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/text_field"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/label_company"
+            />
+
+
+        <TextView
+            android:id="@+id/text_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/label_company"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{model.company}"
+            tools:text="Deutsche Bahn"
+            />
+
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@{model.description}"
+            tools:text="@string/bottom_sheet_behavior"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        />
+    </FrameLayout>
+</layout>

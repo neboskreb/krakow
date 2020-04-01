@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="john.pazekha.krakow.ui.recycler.EntrySchool" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/entry_background"
+        >
+
+        <TextView
+            android:id="@+id/text_field"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@{model.period}"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2019-2020"
+            />
+
+        <TextView
+            android:id="@+id/text_skills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{model.study}"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_field"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/role"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

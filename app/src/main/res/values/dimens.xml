@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="app_bar_height">280dp</dimen>
+    <dimen name="entry_offset">16dp</dimen>
+</resources>

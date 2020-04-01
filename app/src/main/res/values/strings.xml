@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Krakow coding assignment</string>
+    <string name="label_company">Company:</string>
+
+    <string name="section_summary">Summary</string>
+    <string name="section_jobs">Professional experience (20 years)</string>
+    <string name="section_study">Education (16 years total)</string>
+    <string name="section_skills">Skills</string>
+    <string name="content_description_start_whatsapp_chat">Start Whatsapp chat</string>
+    <string name="content_description_start_phone_call">Start phone call</string>
+    <string name="content_description_write_an_email">Write an e-mail</string>
+    <string name="content_description_see_linkedin_profile">See Linked-In profile</string>
+</resources>
